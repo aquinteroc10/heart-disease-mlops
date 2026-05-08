@@ -56,3 +56,4 @@ def predecir(paciente: PacienteInput):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+    
