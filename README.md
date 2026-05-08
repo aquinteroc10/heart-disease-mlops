@@ -1,5 +1,7 @@
 # Data Lake + Forecasting + Dashboard (MLOps local con Docker)
 
+**Grupo de trabajo: Mateo Melendez y Andrea Quintero.**
+
 Este proyecto es una arquitectura local basada en herramientas open source y Docker para construir un **Data Lake local**, realizar **modelos de forecasting** y desplegar un **dashboard interactivo**. Está orientado a escenarios comerciales como análisis SELL IN / SELL OUT y toma de decisiones predictivas.
 
 ## Arquitectura y tecnologías utilizadas
