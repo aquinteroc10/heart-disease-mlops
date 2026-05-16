@@ -5,15 +5,15 @@ on:
     branches:
       - main
 
-env:
-  BASE_URL: /${{ github.event.repository.name }}
-
 permissions:
   contents: write
 
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+
+    env:
+      BASE_URL: /heart-disease-mlops
 
     steps:
       - uses: actions/checkout@v4
@@ -27,9 +27,8 @@ jobs:
         run: npm install -g mystmd
 
       - name: Build the book
-        run: |
-          cd heart-book
-          myst build --html
+        working-directory: heart-book
+        run: myst build --html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
