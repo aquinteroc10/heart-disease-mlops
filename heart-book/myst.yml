@@ -1,0 +1,31 @@
+version: 1
+
+project:
+  title: Heart Disease MLOps
+  authors:
+    - name: Mateo Meléndez & Andrea Quintero
+
+site:
+  template: book-theme
+
+  options:
+    folders: true
+    hide_pagination: true
+
+  nav:
+    - title: Inicio
+      url: intro.md
+
+    - title: ETAPA 1
+      url: 1_model_leakage_demo.ipynb
+
+    - title: ETAPA 2
+      url: 2_model_pipeline_cv.ipynb
+
+  actions:
+    - title: GitHub
+      url: https://github.com
+
+  domains: []
+
+index: intro.md
