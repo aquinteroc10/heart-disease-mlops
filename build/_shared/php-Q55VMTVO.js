@@ -1,1 +1,1 @@
-import{a}from"/build/_shared/chunk-5XNNEDOD.js";import"/build/_shared/chunk-J3PKFMLQ.js";import"/build/_shared/chunk-OZE3FFNP.js";export default a();
+import{a}from"/heart-disease-mlops/build/_shared/chunk-5XNNEDOD.js";import"/heart-disease-mlops/build/_shared/chunk-J3PKFMLQ.js";import"/heart-disease-mlops/build/_shared/chunk-OZE3FFNP.js";export default a();
