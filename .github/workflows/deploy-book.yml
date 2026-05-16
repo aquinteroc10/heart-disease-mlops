@@ -5,24 +5,28 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.10'
+          node-version: '20'
 
-      - name: Install jupyter-book
-        run: pip install jupyter-book==0.15.1
+      - name: Install mystmd
+        run: npm install -g mystmd
 
       - name: Build the book
         run: |
           cd heart-book
-          jupyter-book build .
+          myst build --html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
