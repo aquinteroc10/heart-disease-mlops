@@ -12,23 +12,22 @@ jobs:
   deploy-book:
     runs-on: ubuntu-latest
 
-    env:
-      BASE_URL: /heart-disease-mlops
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '20'
+          python-version: '3.11'
 
-      - name: Install mystmd
-        run: npm install -g mystmd
+      - name: Install Jupyter Book
+        run: |
+          pip install jupyter-book==0.15.1
 
       - name: Build the book
-        working-directory: heart-book
-        run: myst build --html
+        run: |
+          cd heart-book
+          jupyter-book build .
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
