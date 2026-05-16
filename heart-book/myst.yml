@@ -28,4 +28,4 @@ site:
 
   domains: []
 
-index: intro.md
+  baseurl: /heart-disease-mlops/
